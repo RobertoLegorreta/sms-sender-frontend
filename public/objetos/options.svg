@@ -1,0 +1,12 @@
+<svg id="menu-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 33.333">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="menu">
+    <path id="Path_6073" data-name="Path 6073" class="cls-1" d="M0,109.833H50v-5.556H0ZM0,95.944H50V90.389H0ZM0,76.5v5.556H50V76.5Z" transform="translate(0 -76.5)"/>
+  </g>
+</svg>

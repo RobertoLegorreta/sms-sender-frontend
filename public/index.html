@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+  <title>Mensajes Gratis</title>
+  <link rel="shortcut icon" type="image/png" href="objetos/favicon.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="384x384" href="./icons/icon-384x384.png">
+
+
+
+  <!-- update the version number as needed -->
+  <!-- <script defer src="/__/firebase/5.7.0/firebase-app.js"></script> -->
+
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/5.7.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.7.0/firebase-storage.js"></script> -->
+
+  <!-- initialize the SDK after all desired features are loaded -->
+  <!-- <script defer src="/__/firebase/init.js"></script> -->
+
+  <!-- My own scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/eventListeners.js"></script>
+  <script src="js/basicView.js"></script>
+  <script src="js/showMessages.js"></script>
+  <script src="js/saveMessages.js"></script>
+  <script src="js/deliveryFailed.js"></script>
+  <script src="js/deliverySucceded.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/goPremiumPopup.js"></script>
+  <script src="js/creatorPopup.js"></script>
+
+</head>
+
+<body>
+  <div id="header">
+    <p id="logo">SMS</p>
+    <div>
+      <p class="menu selected">DASHBOARD</p>
+      <p class="menu">GRUPOS</p>
+      <p class="menu">REGISTRO</p>
+      <figure id="options">
+        <img src="objetos/options.svg" alt="Opciones desplegables">
+      </figure>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="leftPane" class="section">
+      <p class="sectionTitle">Enviar mensaje</p>
+      <input id="destinatario" type="text" pattern="/^-?\d*$/" maxlength="10" placeholder="Destinatario: ">
+      <textarea id="mensaje" placeholder="Mensaje: " maxlength="160"></textarea>
+      <hr class="horizontal" noshade>
+      <p id="enviarMensaje">Enviar</p>
+    </div>
+
+    <div id="rightPane">
+      <div class="section logs">
+        <p class="sectionTitle">Registro de mensajes</p>
+        <table id="messageRegistryTable">
+          <tr class="tableHeader">
+            <td class="fechaTD">FECHA</td>
+            <td class="destinatarioTD">DESTINATARIO</td>
+            <td class="mensajeTD">MENSAJE</td>
+            <td class="estadoTD">ESTADO</td>
+          </tr>
+          <tr id="emptyMessageRegistry">
+            <td class="fechaTD">N/A</td>
+            <td class="destinatarioTD">N/A</td>
+            <td class="mensajeTD">N/A</td>
+            <td class="estadoTD">N/A</td>
+          </tr>
+        </table>
+      </div>
+      <!--End of logs #section  -->
+
+      <div class="section groups">
+        <p class="sectionTitle">Mis grupos</p>
+        <table>
+          <tr class="tableHeader">
+            <td class="nombreTD">NOMBRE</td>
+            <td class="grupoTD">CANTIDAD DE USUARIOS</td>
+          </tr>
+          <tr>
+            <td class="nombreTD">N/A</td>
+            <td class="grupoTD">N/A</td>
+          </tr>
+        </table>
+      </div>
+      <!--End of groups #section  -->
+    </div>
+    <!--End of #rightPane -->
+  </div>
+  <!--End of #content -->
+
+  <div id="creatorPopup">
+    <figure><img src="objetos/picture.jpg"></figure>
+    <p>Hola soy <span>Roberto Legorreta</span>, creador de mensajesgratis.mx, sígueme en <a
+        href="https://www.linkedin.com/in/rlegorreta/" target="_blank">LinkedIn</a> para
+      conocer más proyectos divertidos.</p>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function () {
+          console.log('Service Worker Registered');
+        });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'GothamLight';
+  src: url('../fonts/Gotham-Light.ttf');
+}
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url('../fonts/Gotham-Book.ttf');
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('../fonts/Gotham-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url('../fonts/Gotham-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'GothamUltra';
+  src: url('../fonts/Gotham-Ultra.ttf');
+}
+
+body{
+  margin: 0; 
+  padding: 0; 
+}
+
+p{
+  margin: 0; 
+  padding: 0;
+}
+
+#header{
+  width: 100%;
+  background: #000000; 
+  height: 62px;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 150px; 
+  box-sizing: border-box;
+  position: fixed; 
+}
+
+#header div{
+  height: 100; 
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#logo{
+  font-family: GothamUltra;
+  font-size: 26px; 
+  color: #0CF2A2; 
+  display: inline-block; 
+  cursor: pointer; 
+}
+
+.menu{
+  font-family: GothamBold;
+  font-size: 12px; 
+  color: white; 
+  display: inline-block; 
+  margin-right: 25px;
+  cursor: pointer; 
+  padding: 7px; 
+}
+
+.selected{
+  color: #0CF2A2; 
+  border-bottom: 3px solid #0CF2A2; 
+  border-left: 3px solid #0CF2A2; 
+}
+
+#options{
+  display: inline-block; 
+  width: 25px; 
+  height: 17px;
+  margin: 0; 
+  cursor: pointer; 
+}
+
+#options img{
+  width: 100%; 
+  height: 100%; 
+}
+
+#content{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
+  padding: 100px 0; 
+  
+}
+.section{
+  border: 1px solid #8E8E8E; 
+  border-radius: 10px; 
+}
+
+.sectionTitle{
+  font-family: GothamLight; 
+  font-size: 16px; 
+  color: #000000; 
+  margin: 10px 0 25px 0; 
+}
+
+#leftPane{
+  width: 550px; 
+  max-width: 95%;
+  box-sizing: border-box; 
+  padding: 15px; 
+  height: fit-content;
+}
+
+#destinatario{
+  font-family: GothamBook; 
+  font-size: 13px; 
+  display: inline-block; 
+  outline: none; 
+  background: #EFEFEF; 
+  border-radius: 5px; 
+  padding: 15px; 
+  border: none; 
+  width: 100%; 
+  box-sizing: border-box;  
+  margin-bottom: 15px; 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#mensaje{
+  font-family: GothamBook; 
+  font-size: 13px; 
+  display: inline-block; 
+  outline: none; 
+  background: #EFEFEF; 
+  border-radius: 5px; 
+  padding: 15px; 
+  border: none; 
+  width: 100%; 
+  box-sizing: border-box;  
+  height: 200px;
+  resize: none; 
+}
+
+#enviarMensaje{
+  font-family: GothamMedium; 
+  font-size: 14px; 
+  display: inline-block; 
+  background: #F6808C; 
+  border-radius: 5px;
+  color: white; 
+  text-align: center; 
+  padding: 15px 30px;  
+  cursor: pointer; 
+}
+
+#enviarMensaje:hover{
+  background: #da3344;
+}
+
+.horizontal{
+  width: 100%; 
+  height: 1px;
+  color: #8E8E8E; 
+  margin: 20px 0;
+  border: none; 
+}
+
+#rightPane{
+  width: 600px; 
+  max-width: 95%; 
+}
+
+#rightPane .section:last-child{
+  margin-top: 50px; 
+}
+
+#rightPane .sectionTitle{
+  margin: 20px 0 20px 20px; 
+}
+
+table{
+  width: 100%; 
+  border-collapse: none; 
+  border-spacing: 0px;
+}
+
+tbody{
+  width: 100%; 
+}
+
+tr{
+  width: 100%; 
+}
+
+table td{
+  font-family: GothamBook;
+  font-size: 12px; 
+  color: #606060; 
+  text-align: center;
+  padding: 5px;  
+  border-bottom: 1px solid #606060; 
+  border-right: 1px solid #606060; 
+  box-sizing: border-box; 
+  height: 55px; 
+}
+
+table tr:first-child td{
+  border-top: 1px solid #606060; ;
+}
+
+table tr:last-child td{
+  border-bottom: none;
+}
+
+table tr td:last-child{
+  border-right: none;
+}
+
+.tableHeader{
+  background: #EFEFEF; 
+  border: none; 
+  text-align: center; 
+}
+
+.tableHeader td{
+  font-family: GothamMedium; 
+  color: #212121; 
+  font-size: 12px;
+  padding: 15px; 
+}
+
+.fechaTD{
+  width: 25%; 
+  text-align: center; 
+}
+
+.destinatarioTD{
+  width: 20%; 
+  text-align: center; 
+}
+
+.mensajeTD{
+  width: 35%; 
+  text-align: center; 
+}
+
+.estadoTD{
+  width: 20%; 
+  text-align: center; 
+}
+
+.nombreTD{
+  width: 60%; 
+  text-align: center; 
+}
+
+.grupoTD{
+  width: 40%; 
+  text-align: center; 
+}
+
+#backgroundWindow{
+  display: flex; 
+  width: 100%; 
+  height: 100vh; 
+  background: rgba(0,0,0,.7);
+  position: fixed; 
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading {
+  width: 55px; 
+  height: 55px; 
+}
+
+#loading img{
+  width: 100%; 
+  height: 100%; 
+}
+
+#messagePopup{
+  background: white; 
+  border-radius: 8px; 
+  padding: 35px 60px; 
+}
+
+#messagePopup p{
+  text-align: center; 
+  font-family: 'GothamMedium'; 
+  font-size: 14px; 
+  margin-bottom: 15px;
+}
+
+#messagePopup figure {
+  width: 40px; 
+  height: 40px; 
+  margin: 0 auto;
+}
+
+#messagePopup figure img {
+  width: 100%; 
+  height: 100%; 
+}
+
+#closePopup{
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  right: 40px;
+  top: 30px;
+  margin: 0;
+}
+
+#closePopup img{
+  cursor: pointer;
+  width: 100%; 
+  height: 100%;
+}
+
+#goPremiumPopup{
+  position: fixed; 
+  top: 50px; 
+  right: 50px; 
+  background: #FAFAFA;
+  border-radius: 12px;  
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.16);
+  display: flex;
+  padding: 20px;  
+  align-items: center; 
+}
+
+#goPremiumPopup figure {
+  width: 40px; 
+  height: 40px; 
+  margin: 0;
+  margin-right: 20px; 
+}
+
+#goPremiumPopup img {
+  width: 100%; 
+  height: 100%; 
+}
+
+#goPremiumPopup p{
+  font-family: 'GothamBook'; 
+  font-size: 14px;
+}
+
+#goPremiumPopup span{
+  font-family: 'GothamMedium'; 
+  font-size: 14px;
+}
+
+#creatorPopup{
+  width: 300px; 
+  border-radius: 9px; 
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.16);
+  position: fixed;
+  bottom: 120px; 
+  right: -450px; 
+  background: white; 
+  padding: 25px; 
+}
+
+#creatorPopup figure {
+  width: 60px; 
+  height: 60px; 
+  position: absolute;
+  left: -40px; 
+  top: -40px; 
+  margin: 0; 
+}
+
+#creatorPopup img {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 100px;
+}
+
+#creatorPopup p {
+  font-family: 'GothamBook'; 
+  font-size: 15px;
+}
+
+#creatorPopup span {
+  font-family: 'GothamMedium'
+}
+
+#creatorPopup a {
+  color: #0077B5; 
+  font-family: 'GothamMedium'; 
+}
+
+#messageRegistryTable{
+  width: 100%;
+  display: block;
+  overflow-x: scroll; 
+}
+
+@media only screen and (max-width: 1200px) {
+  #content{
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  #header {
+    padding: 0 50px; 
+  }
+
+  #leftPane{
+    width: 600px !important; 
+  }
+
+  .logs{
+    margin-top: 50px; 
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  #logo {
+    width: 0px;
+    opacity: 0;
+    cursor: default;  
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #goPremiumPopup{
+    right: 15px;
+  }
+
+  #header {
+    padding: 0 10px; 
+  }
+
+  #creatorPopup{
+    right: -490px; 
+    width: 260px;
+  }
+}
+
+
+
